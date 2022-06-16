@@ -1,5 +1,9 @@
+import React from 'react';
 import { Component } from '@angular/core';
 import AgoraAppBuilder from 'agora-app-builder-sdk';
+
+// Prevent dead code elimination on react
+React.createElement('div');
 
 @Component({
   selector: 'app-root',
@@ -25,7 +29,11 @@ export class AppComponent {
   title = 'angular-app';
 
   ngOnInit() {
-    const fpe = AgoraAppBuilder.createFPE({});
+    const fpe = AgoraAppBuilder.createFPE({
+        components:{
+            create: () => <div>Hi</div>
+          }
+      });
     AgoraAppBuilder.addFPE(fpe);
 
     AgoraAppBuilder.on(

@@ -23,6 +23,7 @@
       "dom"
     ],
     "allowSyntheticDefaultImports": true,
+    "jsx": "react",
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
