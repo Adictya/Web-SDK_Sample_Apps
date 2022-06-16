@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="app-builder-web-sdk.var.js"></script>
+    <script>
+      // Install FPE
+      const fpe = AgoraAppBuilder.default.createFPE({})
+      AgoraAppBuilder.default.addFPE(fpe)
+
+      function JoinMeeting() {
+        AgoraAppBuilder.default.joinMeeting(document.getElementById("meetingId").value)
+      }
+
+      AgoraAppBuilder.default.on("create", (hostMeetingId, attendeeMeetingId, pstnNumber) => {
+        console.log("Meeting created with", {
+          hostMeetingId,
+          attendeeMeetingId,
+          pstnNumber,
+        });
+      });
+      AgoraAppBuilder.default.on("preJoin", (meetingTitle, deviceList) => {
+          console.log("in meeting precall with", { meetingTitle, deviceList });
+        });
+      AgoraAppBuilder.default.on("join", (meetingTitle, deviceList, isHost) => {
+          console.log("Meeting joined with", { meetingTitle, deviceList, isHost });
+        });
+      AgoraAppBuilder.default.on("leave", () => {
+          console.log("Meeting left");
+        });
+    </script>
+  </head>
+  <body>
+    <div >
+      <div>
+        Join a meeting:
+        <input id="meetingId" placeholder="meetingId"></input>
+        <button
+            onclick="JoinMeeting()";
+        >
+          Join
+        </button>
+      </div>
+      <div style="height: 100vh">
+        <app-builder />
+      </div>
+    </div>
+  </body>
+</html>
