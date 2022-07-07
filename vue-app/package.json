@@ -8,7 +8,7 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "agora-app-builder-sdk": "file:../../agora/projects/app-builder-core/Builds/web-sdk/agora-app-builder-sdk-1.0.1.tgz",
+    "agora-app-builder-sdk": "file:../../../agora/projects/web-sdk-app-builder-core/Builds/web-sdk",
     "core-js": "^3.8.3",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
