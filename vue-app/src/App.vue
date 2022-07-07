@@ -17,7 +17,7 @@ const Create = () => {
 
 const FPE = AgoraAppBuilder.createFPE({
   components: {
-    create: PreCall,
+    create: Create,
   },
 });
 
