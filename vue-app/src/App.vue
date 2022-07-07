@@ -11,14 +11,14 @@ import React from "react";
 // To prevent react getting removed in dead code elimination step;
 React.createElement("div");
 
-const Create = () => {
-  return <div>Create screen</div>;
-};
+// const Create = () => {
+//   return <div>Create screen</div>;
+// };
 
 const FPE = AgoraAppBuilder.createFPE({
-  components: {
-    create: Create,
-  },
+  //  components: {
+  //    create: Create,
+  //  },
 });
 
 AgoraAppBuilder.addFPE(FPE);
