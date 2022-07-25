@@ -9,7 +9,7 @@ React.createElement('div');
   selector: 'app-root',
   template: `
     <div >
-      <div>
+      <div style="height: 1.5rem">
         Join a meeting:
         <input id="meetingId" placeholder="meetingId"/>
         <button
@@ -18,7 +18,7 @@ React.createElement('div');
           Join
         </button>
       </div>
-      <div style="height: 100vh">
+      <div style="height: calc(100vh - 1.5rem)">
         <app-builder></ app-builder>
       </div>
     </div>
@@ -30,9 +30,9 @@ export class AppComponent {
 
   ngOnInit() {
     const fpe = AgoraAppBuilder.createFPE({
-        components:{
-            create: () => <div>Hi</div>
-          }
+        // components:{
+        //     create: () => <div>Hi</div>
+        //   }
       });
     AgoraAppBuilder.addFPE(fpe);
 
