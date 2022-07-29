@@ -11,8 +11,9 @@ function App() {
     });
     AppBuilderMethods.addFPE({
       components: {
-        // create: Precall,
-        // videoCall: Precall,
+        // components:{
+        //     create: () => <div>Hi</div>
+        //   }
       },
     });
   }, []);
