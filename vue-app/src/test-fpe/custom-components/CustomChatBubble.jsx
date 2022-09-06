@@ -13,7 +13,7 @@ const { Text, TextInput, TouchableOpacity, View } = RN;
 const { useState } = React;
 
 export const CustomCmp = (props) => {
-  const [editActive, setEditActive] = useState(true);
+  const [editActive, setEditActive] = useState(false);
   const editmsg = useEditMessage();
   const delmsg = useDeleteMessage();
   const localUid = useLocalUid();
@@ -21,7 +21,7 @@ export const CustomCmp = (props) => {
   const [editMsgLocal, setEditMsgLocal] = useState("");
   if (editActive) {
     return (
-      <>
+      <React.Fragment>
         <TextInput
           style={{
             marginHorizontal: 10,
@@ -60,7 +60,7 @@ export const CustomCmp = (props) => {
             <Text>Cancel</Text>
           </TouchableOpacity>
         </View>
-      </>
+      </React.Fragment>
     );
   }
   return (
@@ -79,7 +79,7 @@ export const CustomCmp = (props) => {
           }}
         >
           {!props?.isDeleted && (
-            <>
+            <React.Fragment>
               <TouchableOpacity
                 onPress={() => {
                   setEditActive(true);
@@ -100,7 +100,7 @@ export const CustomCmp = (props) => {
               >
                 <Text style={{ color: "red" }}>Delete</Text>
               </TouchableOpacity>
-            </>
+            </React.Fragment>
           )}
         </View>
       )}

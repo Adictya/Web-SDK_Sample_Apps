@@ -18,6 +18,7 @@ import {
   RN,
 } from "agora-app-builder-sdk";
 const { View, Text, StyleSheet } = RN;
+const { Fragment } = React;
 
 export const CustomNavBar = () => {
   //commented for v1 release
@@ -66,13 +67,13 @@ export const CustomNavBar = () => {
           <ParticipantsIconButton />
         </View>
         {config.CHAT ? (
-          <>
+          <React.Fragment>
             <View style={[style.navItem, style.navSmItem]}>
               <ChatIconButton />
             </View>
-          </>
+          </React.Fragment>
         ) : (
-          <></>
+          <React.Fragment></React.Fragment>
         )}
         <View
           style={[style.navItem, style.navSmItem]}
