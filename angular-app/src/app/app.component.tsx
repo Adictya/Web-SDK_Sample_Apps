@@ -1,5 +1,6 @@
 import React from 'react';
 import { Component } from '@angular/core';
+import fpe from './test-fpe'
 import AgoraAppBuilder from 'agora-app-builder-sdk';
 
 // Prevent dead code elimination on react
@@ -29,11 +30,6 @@ export class AppComponent {
   title = 'angular-app';
 
   ngOnInit() {
-    const fpe = AgoraAppBuilder.createFPE({
-        // components:{
-        //     create: () => <div>Hi</div>
-        //   }
-      });
     AgoraAppBuilder.addFPE(fpe);
 
     AgoraAppBuilder.on(
@@ -59,7 +55,8 @@ export class AppComponent {
 
   JoinMeeting() {
     AgoraAppBuilder.joinMeeting(
-      document.getElementById('meetingId')!.nodeValue!
+      // document.getElementById('meetingId')!.nodeValue!
+      '5b512f7d-d717-4dc5-84f2-eaa43133c798'
     );
   }
   ngOnDestroy(){

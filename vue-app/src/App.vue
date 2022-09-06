@@ -5,22 +5,11 @@
 </template>
 
 <script>
-import AgoraAppBuilder from "agora-app-builder-sdk";
+import AgoraAppBuilder,{React} from "agora-app-builder-sdk";
+import FPE from './test-fpe'
 // eslint-disable-next-line
-import React from "react";
 // To prevent react getting removed in dead code elimination step;
 React.createElement("div");
-
-// const Create = () => {
-//   return <div>Create screen</div>;
-// };
-
-const FPE = AgoraAppBuilder.createFPE({
-  //  components: {
-  //    create: Create,
-  //  },
-});
-
 AgoraAppBuilder.addFPE(FPE);
 
 export default {
