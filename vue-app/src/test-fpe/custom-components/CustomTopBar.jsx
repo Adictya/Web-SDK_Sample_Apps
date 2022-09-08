@@ -14,11 +14,11 @@ import {
   useMeetingInfo,
   NavBarComponentsArray,
   config,
+  // eslint-disable-next-line
   React,
   RN,
 } from "agora-app-builder-sdk";
 const { View, Text, StyleSheet } = RN;
-const { Fragment } = React;
 
 export const CustomNavBar = () => {
   //commented for v1 release
