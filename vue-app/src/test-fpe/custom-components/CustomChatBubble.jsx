@@ -34,6 +34,7 @@ export const CustomCmp = (props) => {
             borderColor: "black",
           }}
           placeholder={"Edit message"}
+          // eslint-disable-next-line
           onChangeText={(txt) => setEditMsgLocal(txt)}
         />
         <View style={{ flexDirection: "row", justifyContent: "flex-end" }}>
@@ -68,7 +69,7 @@ export const CustomCmp = (props) => {
       <ChatBubble
         {...props}
         message={
-          props.isDeleted ? "This message was deleted" : props.message + "hi"
+          props.isDeleted ? "This message was deleted" : props.message
         }
       />
       {props.uid === localUid && (

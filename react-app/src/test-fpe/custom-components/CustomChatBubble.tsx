@@ -1,3 +1,4 @@
+// @ts-nocheck
 // import React from 'react';
 // import {ChatBubbleProps, ChatBubble} from 'agora-app-builder-sdk';
 // import * as filter from 'leo-profanity';

@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, {useState} from 'react';
 import {ParticipantsView, useSetName, isWeb, config} from 'agora-app-builder-sdk';
 import {View, TextInput, Button, Dimensions} from 'react-native-web';

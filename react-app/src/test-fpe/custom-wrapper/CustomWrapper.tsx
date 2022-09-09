@@ -1,3 +1,4 @@
+// @ts-nocheck
 /*
 ********************************************
  Copyright © 2021 Agora Lab, Inc., all rights reserved.

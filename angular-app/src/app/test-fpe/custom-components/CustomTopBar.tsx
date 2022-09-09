@@ -12,24 +12,20 @@
 */
 import {
   useMeetingInfo,
-  useRecording,
   NavBarComponentsArray,
   config,
+  // eslint-disable-next-line
   React,
   RN,
 } from "agora-app-builder-sdk";
-const { useContext } = React;
-const { View, Text, StyleSheet, ViewStyle } = RN;
+const { View, Text, StyleSheet } = RN;
 
 const CustomNavBar = () => {
   //commented for v1 release
   //const recordingLabel = useString('recordingLabel')();
-  const recordingLabel = "Recording";
   const { meetingTitle } = useMeetingInfo();
-  const { isRecordingActive } = useRecording();
   const [
     CopyJoinInfo,
-    ParticipantsCountView,
     ParticipantsIconButton,
     ChatIconButton,
     LayoutIconButton,

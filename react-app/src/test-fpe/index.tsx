@@ -1,3 +1,4 @@
+// @ts-nocheck
 import TopPinnedVideo from './custom-layout/TopPinnedLayout';
 import {CustomWrapperProvider} from './custom-wrapper/CustomWrapper';
 import {CustomMaxVideoView} from './custom-components/CustomMaxVideoView';

@@ -1,3 +1,4 @@
+// @ts-nocheck
 import {ControlsComponentsArray} from 'agora-app-builder-sdk';
 import React from 'react';
 import {View} from 'react-native-web';

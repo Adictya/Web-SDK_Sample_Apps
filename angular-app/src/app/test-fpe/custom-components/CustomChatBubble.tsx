@@ -35,6 +35,8 @@ const CustomCmp = (props: ChatBubbleProps) => {
             borderColor: "black",
           }}
           placeholder={"Edit message"}
+          // @ts-ignore
+          // eslint-disable-next-line
           onChangeText={(txt) => setEditMsgLocal(txt)}
         />
         <View style={{ flexDirection: "row", justifyContent: "flex-end" }}>

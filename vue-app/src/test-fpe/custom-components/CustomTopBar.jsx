@@ -20,7 +20,7 @@ import {
 } from "agora-app-builder-sdk";
 const { View, Text, StyleSheet } = RN;
 
-export const CustomNavBar = () => {
+const CustomNavBar = () => {
   //commented for v1 release
   //const recordingLabel = useString('recordingLabel')();
   const { meetingTitle } = useMeetingInfo();
@@ -67,13 +67,13 @@ export const CustomNavBar = () => {
           <ParticipantsIconButton />
         </View>
         {config.CHAT ? (
-          <React.Fragment>
+          <>
             <View style={[style.navItem, style.navSmItem]}>
               <ChatIconButton />
             </View>
-          </React.Fragment>
+          </>
         ) : (
-          <React.Fragment></React.Fragment>
+          <></>
         )}
         <View
           style={[style.navItem, style.navSmItem]}
@@ -102,3 +102,5 @@ const style = StyleSheet.create({
   },
   navSmItem: {},
 });
+
+export default CustomNavBar;
