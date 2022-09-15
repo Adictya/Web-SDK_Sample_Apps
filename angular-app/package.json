@@ -19,7 +19,7 @@
     "@angular/platform-browser-dynamic": "~13.3.0",
     "@angular/router": "~13.3.0",
     "@types/react": "^18.0.13",
-    "agora-app-builder-sdk": "file:../../../fpe-api-v1-app-builder-core/Builds/web-sdk",
+    "agora-app-builder-sdk": "file:../../../agora/fpe-api-v1-app-builder-core/Builds/web-sdk",
     "react": "^18.2.0",
     "react-native-web": "^0.0.0-a825648cb",
     "rxjs": "~7.5.0",

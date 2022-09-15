@@ -1,8 +1,27 @@
-import React, { useEffect } from "react";
-import fpe from "./test-fpe";
+import React, { useEffect, useState } from "react";
+import Checkbox from "./CheckBox";
 import AppBuilderMethods from "agora-app-builder-sdk";
+import useFPE from "./useFPE";
 
 function App() {
+  const [topbar, setTopbar] = useState(false);
+  const [chatBubble, setChatBubble] = useState(false);
+  const [participantsPanel, setParticipantsPanel] = useState(false);
+  const [bottomBar, setBottomBar] = useState(false);
+  const [customContent, setCustomContent] = useState(false);
+  const [customLayout, setCustomLayout] = useState(false);
+  const [i8n, setI8n] = useState(false);
+
+  useFPE({
+    topbar,
+    chatBubble,
+    participantsPanel,
+    bottomBar,
+    customContent,
+    customLayout,
+    i8n,
+  });
+
   useEffect(() => {
     const unsubs: Array<any> = [
       AppBuilderMethods.on(
@@ -50,15 +69,25 @@ function App() {
 
   return (
     <div>
-      <div style={{ height: "1.5rem" }}>
-        Join a meeting:
-        <input id="meetingId" placeholder="meetingId" />
-        <button onClick={joinMeeting}>Join</button>
+      <div
+        style={{ display: "flex", overflowX: "scroll", alignItems: "center" }}
+      >
+        <div style={{ display: "flex", height: "3rem" }}>
+          <input id="meetingId" placeholder="meetingId" />
+          <button onClick={joinMeeting}>Join</button>
+        </div>
+        <Checkbox state={{ topbar }} setter={setTopbar} />
+        <Checkbox state={{ chatBubble }} setter={setChatBubble} />
+        <Checkbox state={{ participantsPanel }} setter={setParticipantsPanel} />
+        <Checkbox state={{ bottomBar }} setter={setBottomBar} />
+        <Checkbox state={{ customContent }} setter={setCustomContent} />
+        <Checkbox state={{ customLayout }} setter={setCustomLayout} />
+        <Checkbox state={{ i8n }} setter={setI8n} />
       </div>
       <div
         style={{
           display: "flex",
-          height: "calc( 100vh - 1.5rem )",
+          height: "calc( 100vh - 3rem )",
           width: "100vw",
         }}
       >
