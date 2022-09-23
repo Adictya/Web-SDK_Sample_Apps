@@ -26,8 +26,7 @@ export class AppComponent {
   title = "angular-app";
   unsubs: Array<any> = [];
   ngOnInit() {
-    AgoraAppBuilder.addFPE(fpe);
-
+    // AgoraAppBuilder.customize(fpe);
     this.unsubs = [
       AgoraAppBuilder.on(
         "create",
@@ -42,7 +41,7 @@ export class AppComponent {
       AgoraAppBuilder.on("create", () => {
         console.log("Angular Host App: Meeting created queued event");
       }),
-      AgoraAppBuilder.on("preJoin", (meetingTitle, deviceList) => {
+      AgoraAppBuilder.on("ready-to-join", (meetingTitle, deviceList) => {
         console.log("Angular Host App: precall with", {
           meetingTitle,
           deviceList,
@@ -62,9 +61,9 @@ export class AppComponent {
   }
 
   JoinMeeting() {
-    AgoraAppBuilder.joinMeeting(
-      document.getElementById("meetingId")!.nodeValue!
-    );
+    // AgoraAppBuilder.joinMeeting(
+    //   document.getElementById("meetingId")!.nodeValue!
+    // );
   }
   ngOnDestroy() {
     this.unsubs.forEach((v) => {

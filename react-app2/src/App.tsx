@@ -11,6 +11,7 @@ function App() {
   const [customContent, setCustomContent] = useState(false);
   const [customLayout, setCustomLayout] = useState(false);
   const [i8n, setI8n] = useState(false);
+  const {View} = AppBuilderMethods
 
   useFPE({
     topbar,
@@ -91,7 +92,7 @@ function App() {
           width: "100vw",
         }}
       >
-        <AppBuilderMethods.View />
+        <View />
       </div>
     </div>
   );
