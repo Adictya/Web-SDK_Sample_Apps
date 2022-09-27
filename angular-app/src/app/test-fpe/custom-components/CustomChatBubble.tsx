@@ -9,7 +9,7 @@ import {
   useLocalUid,
   React,
   RN,
-} from "agora-app-builder-sdk";
+} from "@appbuilder/web";
 const { Button, Text, TextInput, Touchable, TouchableOpacity, View } = RN;
 const { useState } = React;
 

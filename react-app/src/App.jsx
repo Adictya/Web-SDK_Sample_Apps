@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Checkbox from "./CheckBox";
-import AppBuilderMethods from "agora-app-builder-sdk";
+import AppBuilderMethods from "@appbuilder/react";
 import useFPE from "./useFPE";
 
 function App() {

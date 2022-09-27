@@ -8,7 +8,7 @@ import {
   useLocalUid,
   React,
   RN,
-} from "agora-app-builder-sdk";
+} from "@appbuilder/web";
 const { Text, TextInput, TouchableOpacity, View } = RN;
 const { useState } = React;
 
@@ -68,9 +68,7 @@ export const CustomCmp = (props) => {
     <View>
       <ChatBubble
         {...props}
-        message={
-          props.isDeleted ? "This message was deleted" : props.message
-        }
+        message={props.isDeleted ? "This message was deleted" : props.message}
       />
       {props.uid === localUid && (
         <View

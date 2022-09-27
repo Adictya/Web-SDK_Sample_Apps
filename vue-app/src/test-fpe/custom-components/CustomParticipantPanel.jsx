@@ -6,7 +6,7 @@ import {
   config,
   RN,
   React,
-} from "agora-app-builder-sdk";
+} from "@appbuilder/web";
 const { View, TextInput, Button, Dimensions } = RN;
 const { useState } = React;
 const CustomParticipantPanel = () => {

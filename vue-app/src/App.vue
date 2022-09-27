@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import AgoraAppBuilder, { React } from "agora-app-builder-sdk";
+import AgoraAppBuilder, { React } from "@appbuilder/web";
 import FPE from "./test-fpe";
 // eslint-disable-next-line
 // To prevent react getting removed in dead code elimination step;

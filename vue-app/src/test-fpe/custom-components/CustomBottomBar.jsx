@@ -1,5 +1,5 @@
 // @ts-nocheck
-import { ControlsComponentsArray, RN, React } from "agora-app-builder-sdk";
+import { ControlsComponentsArray, RN, React } from "@appbuilder/web";
 const { View } = RN;
 
 const CustomBottomBar = () => {

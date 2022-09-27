@@ -7,7 +7,7 @@ import {
   // eslint-disable-next-line
   React,
   RN,
-} from "agora-app-builder-sdk";
+} from "@appbuilder/web";
 const { View, Text, StyleSheet } = RN;
 
 const CustomMaxVideoView = ({ user }) => {

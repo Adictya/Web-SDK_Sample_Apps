@@ -6,7 +6,7 @@ import {
   config,
   React,
   RN,
-} from "agora-app-builder-sdk";
+} from "@appbuilder/web";
 const { ScrollView, View, Dimensions, StyleSheet, Text, Pressable } = RN;
 const { useState } = React;
 

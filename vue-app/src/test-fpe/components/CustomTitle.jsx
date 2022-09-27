@@ -1,5 +1,5 @@
 // @ts-nocheck
-import { CustomEvents, RN, React } from "agora-app-builder-sdk";
+import { CustomEvents, RN, React } from "@appbuilder/web";
 const { View, Button } = RN;
 
 export default function CustomTitle() {

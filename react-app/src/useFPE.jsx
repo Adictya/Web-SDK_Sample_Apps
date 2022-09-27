@@ -1,5 +1,5 @@
 import React,{ useEffect } from "react";
-import AppBuilderMethods,{useLayout} from "agora-app-builder-sdk";
+import AppBuilderMethods,{useLayout} from "@appbuilder/react";
 
 const HelloWorldComponent = (props) => {
   return (

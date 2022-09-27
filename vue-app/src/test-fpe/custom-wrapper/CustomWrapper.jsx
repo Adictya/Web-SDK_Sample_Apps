@@ -10,7 +10,7 @@
 *********************************************
 */
 // @ts-ignore
-import { createHook, React } from "agora-app-builder-sdk";
+import { createHook, React } from "@appbuilder/web";
 
 const CustomWrapperContext = React.createContext({
   customKey1: "hi",

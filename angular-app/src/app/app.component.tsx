@@ -1,6 +1,6 @@
 import React from "react";
 import { Component } from "@angular/core";
-import AgoraAppBuilder from "agora-app-builder-sdk";
+import AgoraAppBuilder from "@appbuilder/web";
 import fpe from "./test-fpe";
 
 // Prevent dead code elimination on react
