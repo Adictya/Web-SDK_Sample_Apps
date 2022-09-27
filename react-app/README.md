@@ -1,4 +1,10 @@
+# Build React-sdk 
+Go to `<path-to-app-builder>/Builds/react-sdk`
+Edit `package.json` version number to a unique version
+Run `npm pack`
+
 # Uninstall and Re-Install Appbuilder
+Go to where this directory is cloned
 `npm uninstall agora-app-builder-sdk`
 `npm install <path-to-app-builder>/Builds/react-sdk`
 
