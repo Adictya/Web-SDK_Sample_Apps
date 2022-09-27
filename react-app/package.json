@@ -7,8 +7,6 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-    "agora-app-builder-sdk": "file:../../../agora/fpe-api-v1-app-builder-core/Builds/react-sdk",
-    "agora-app-builder-sdk2": "file:../../agora-app-builder/Builds/react-sdk/agora-app-builder-sdk2-1.0.2.tgz",
     "install": "^0.13.0",
     "nanoid": "^4.0.0",
     "npm": "^8.19.2",
