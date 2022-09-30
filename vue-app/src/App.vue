@@ -6,12 +6,8 @@
 
 <script>
 import AgoraAppBuilder, { React } from "@appbuilder/web";
-import FPE from "./test-fpe";
-// eslint-disable-next-line
-// To prevent react getting removed in dead code elimination step;
 React.createElement("div");
-AgoraAppBuilder.addFPE(FPE);
-// AgoraAppBuilder.joinMeeting("026504a2-f99b-4ddc-b8ae-abee0b71aede");
+AgoraAppBuilder.createCustomization({});
 
 export default {
   name: "App",
