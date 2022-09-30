@@ -1,7 +1,7 @@
 import React from "react";
 import { Component } from "@angular/core";
 import AgoraAppBuilder from "@appbuilder/web";
-import fpe from "./test-fpe";
+import useFpe from "./useFPE";
 
 // Prevent dead code elimination on react
 React.createElement("div");
@@ -26,7 +26,20 @@ export class AppComponent {
   title = "angular-app";
   unsubs: Array<any> = [];
   ngOnInit() {
-    // AgoraAppBuilder.customize(fpe);
+    // FOR QA TESTING ------ FOR QA TESTING ------ FOR QA TESTING ------ FOR QA TESTING ------ FOR QA TESTING ------ FOR QA TESTING ------ FOR QA TESTING ------
+    useFpe({
+      topbar: false,
+      chatTextInput: false,
+      chatSendButton: false,
+      chatBubble: false,
+      participantsPanel: false,
+      bottomBar: false,
+      customContent: false,
+      customLayout: false,
+      i8n: false,
+    });
+    // FOR QA TESTING ------ FOR QA TESTING ------ FOR QA TESTING ------ FOR QA TESTING ------ FOR QA TESTING ------ FOR QA TESTING ------ FOR QA TESTING ------
+
     this.unsubs = [
       AgoraAppBuilder.on(
         "create",
@@ -61,9 +74,9 @@ export class AppComponent {
   }
 
   JoinMeeting() {
-    // AgoraAppBuilder.joinMeeting(
-    //   document.getElementById("meetingId")!.nodeValue!
-    // );
+    AgoraAppBuilder.join(
+      (document.getElementById("meetingId") as HTMLInputElement)!.value
+    );
   }
   ngOnDestroy() {
     this.unsubs.forEach((v) => {
