@@ -1,5 +1,5 @@
-import React,{ useEffect } from "react";
-import AppBuilderMethods,{useLayout} from "@appbuilder/react";
+import React, { useEffect } from "react";
+import AppBuilderMethods from "@appbuilder/react";
 
 const HelloWorldComponent = (props) => {
   return (
@@ -52,6 +52,8 @@ const toggler = (setter, value) => {
 const useFPE = (props) => {
   const {
     topbar,
+    chatTextInput,
+    chatSendButton,
     chatBubble,
     participantsPanel,
     bottomBar,
@@ -60,8 +62,6 @@ const useFPE = (props) => {
     i8n,
   } = props;
 
-  const stuff = useLayout();
-
   useEffect(() => {
     AppBuilderMethods.customize({
       components: {
@@ -69,6 +69,8 @@ const useFPE = (props) => {
           topBar: toggler(topbar, HelloWorldComponent),
           chat: {
             chatBubble: toggler(chatBubble, HelloWorldComponent),
+            chatInput: toggler(chatTextInput, HelloWorldComponent),
+            chatSentButton: toggler(chatSendButton, HelloWorldComponent),
           },
           participantsPanel: toggler(participantsPanel, HelloWorldComponent),
           bottomBar: toggler(bottomBar, HelloWorldComponent),
@@ -78,15 +80,7 @@ const useFPE = (props) => {
       },
       i18n: toggler(i8n, i8nOverride),
     });
-  }, [
-    topbar,
-    chatBubble,
-    participantsPanel,
-    bottomBar,
-    customContent,
-    customLayout,
-    i8n,
-  ]);
+  }, [props]);
 };
 
 export default useFPE;

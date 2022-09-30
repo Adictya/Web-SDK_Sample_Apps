@@ -5,6 +5,8 @@ import useFPE from "./useFPE";
 
 function App() {
   const [topbar, setTopbar] = useState(false);
+  const [chatTextInput, setChatTextInput] = useState(false);
+  const [chatSendButton, setChatSendButton] = useState(false);
   const [chatBubble, setChatBubble] = useState(false);
   const [participantsPanel, setParticipantsPanel] = useState(false);
   const [bottomBar, setBottomBar] = useState(false);
@@ -14,6 +16,8 @@ function App() {
 
   useFPE({
     topbar,
+    chatTextInput,
+    chatSendButton,
     chatBubble,
     participantsPanel,
     bottomBar,
@@ -62,11 +66,8 @@ function App() {
   }, []);
 
   const joinMeeting = () => {
-    AppBuilderMethods.join(
-      document.getElementById("meetingId").value
-    );
+    AppBuilderMethods.join(document.getElementById("meetingId").value);
   };
-
 
   return (
     <div>
@@ -77,10 +78,10 @@ function App() {
           <input id="meetingId" placeholder="meetingId" />
           <button onClick={joinMeeting}>Join</button>
         </div>
-        <div>
-        Overrides:
-        </div>
+        <div>Overrides:</div>
         <Checkbox state={{ topbar }} setter={setTopbar} />
+        <Checkbox state={{ chatTextInput }} setter={setChatTextInput} />
+        <Checkbox state={{ chatSendButton }} setter={setChatSendButton} />
         <Checkbox state={{ chatBubble }} setter={setChatBubble} />
         <Checkbox state={{ participantsPanel }} setter={setParticipantsPanel} />
         <Checkbox state={{ bottomBar }} setter={setBottomBar} />
