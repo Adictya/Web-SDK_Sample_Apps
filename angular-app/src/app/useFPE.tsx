@@ -78,7 +78,7 @@ const useFPE = (props: useFPEInterface) => {
   AppBuilderMethods.customize({
     components: {
       videoCall: {
-        topBar: HelloWorldComponent,
+        topBar: toggler(topbar, HelloWorldComponent),
         chat: {
           chatBubble: toggler(chatBubble, HelloWorldComponent),
           chatInput: toggler(chatTextInput, HelloWorldComponent),
