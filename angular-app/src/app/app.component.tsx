@@ -14,6 +14,7 @@ React.createElement("div");
         Join a meeting:
         <input id="meetingId" placeholder="meetingId" />
         <button (click)="JoinMeeting()">Join</button>
+        <button (click)="Unsubscribe()">Unsubscribe</button>
       </div>
       <div style="height: calc(100vh - 1.5rem)">
         <app-builder></app-builder>
@@ -77,6 +78,12 @@ export class AppComponent {
     AgoraAppBuilder.join(
       (document.getElementById("meetingId") as HTMLInputElement)!.value
     );
+  }
+
+  Unsubscribe() {
+    this.unsubs.forEach((v) => {
+      v();
+    });
   }
   ngOnDestroy() {
     this.unsubs.forEach((v) => {
