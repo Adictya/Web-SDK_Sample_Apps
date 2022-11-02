@@ -3,6 +3,8 @@ import Checkbox from "./CheckBox";
 import AppBuilderMethods from "@appbuilder/react";
 import useFPE from "./useFPE";
 
+let unsubs;
+
 function App() {
   const [topbar, setTopbar] = useState(false);
   const [chatTextInput, setChatTextInput] = useState(false);
@@ -27,7 +29,7 @@ function App() {
   });
 
   useEffect(() => {
-    const unsubs = [
+    unsubs = [
       AppBuilderMethods.on(
         "create",
         (hostMeetingId, attendeeMeetingId, pstnNumber) => {
@@ -69,6 +71,12 @@ function App() {
     AppBuilderMethods.join(document.getElementById("meetingId").value);
   };
 
+  const unsubscribe = () => {
+    unsubs.forEach((v) => {
+      if (typeof v === "function") v();
+    });
+  };
+
   return (
     <div>
       <div
@@ -77,6 +85,7 @@ function App() {
         <div style={{ display: "flex", height: "3rem" }}>
           <input id="meetingId" placeholder="meetingId" />
           <button onClick={joinMeeting}>Join</button>
+          <button onClick={unsubscribe}>Unsubscribe</button>
         </div>
         <div>Overrides:</div>
         <Checkbox state={{ topbar }} setter={setTopbar} />
